@@ -13,13 +13,17 @@ const images = [
   },
 ];
 const gallery = document.querySelector('.gallery');
-
+gallery.style.display = "flex";
+gallery.style.flexWrap = "wrap";
+gallery.style.listStyle = "none";
+gallery.style.justifyContent = "space-between";
+gallery.style.gap = "20px";
 const createGallery = images
-  .map(item => `<li class="gallery__item">
-  <img src="${item.url}" alt="${item.alt} class="gallery__images"</li>`)
-  .join("");
+  .map(item => `<li class="gallery__item" style="flex-basis: calc((100% - 40px) / 3);">
+  <img width="100%" height="100%" style="display: block;" src="${item.url}" alt="${item.alt} class="gallery__image"</li>`);
+   gallery.insertAdjacentHTML("beforeend", createGallery);
 
-gallery.insertAdjacentHTML("beforeend", createGallery);
+
 
 
 
