@@ -11,17 +11,19 @@ const images = [
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
+  
 ];
 const gallery = document.querySelector('.gallery');
 gallery.style.display = "flex";
 gallery.style.flexWrap = "wrap";
 gallery.style.listStyle = "none";
-gallery.style.justifyContent = "space-between";
+gallery.style.justifyContent = "space-around";
+
 gallery.style.gap = "20px";
 const createGallery = images
-  .map(item => `<li class="gallery__item" style="flex-basis: calc((100% - 40px) / 3);">
+  .map(item => `<li class="gallery__item" style="flex-basis: calc((100% - 40px) / 2);">
   <img width="100%" height="100%" style="display: block;" src="${item.url}" alt="${item.alt} class="gallery__image"</li>`);
-   gallery.insertAdjacentHTML("beforeend", createGallery);
+   gallery.insertAdjacentHTML("afterbegin", createGallery);
 
 
 
