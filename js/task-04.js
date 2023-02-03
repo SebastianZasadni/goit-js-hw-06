@@ -14,7 +14,7 @@ const lower = () => {
         decrement.setAttribute("class", "disabled"); 
             }
     }
-}
+}  
 const increase = () => {
     decrement.setAttribute("class", null); 
     counterValue += 1;
