@@ -52,6 +52,3 @@ amount.addEventListener("input", () => {
 createButton.addEventListener("click", createBoxes);
 destroyButton.addEventListener("click", destroyBoxes);
 
-boxes.style.display = "flex";
-boxes.style.justifyContent = "space-between";
-boxes.style.gap = "100px";
