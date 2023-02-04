@@ -7,27 +7,57 @@
     <title>Task 8</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      .login-form {
+      body{
+        position: absolute;
+      }
+      #reset{
+        position:relative;
+        margin:50px;
+        left: -540px;
+        top: -80px;
+      }
+      .login-form,
+      .register-form {
         max-width: 320px;
         display: flex;
         flex-direction: column;
+        border: 2px solid black;
+        margin: 50px;
+        outline: 5px solid grey;
+        float:left;
+        padding: 80px 40px 120px 40px;
       }
 
-      .login-form label {
+      .login-form label,
+      .register-form label {
         margin-bottom: 16px;
       }
 
       .login-form input,
-      .login-form button {
+      .login-form button,
+      .register-form input,
+      .register-form button {
         width: 100%;
         padding: 4px;
         font: inherit;
       }
-    </style>
+          </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
-
+    <button type="submit" id="reset">Reset local storage</button>
+    <form class="register-form">
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+      <button type="submit" data-check>Register</button>
+          </form>
+          
     <form class="login-form">
       <label>
         Email
@@ -37,9 +67,9 @@
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit">Login</button>
-    </form>
-
+      <button type="submit" data-check>Login</button>
+          </form>
+          
     <script src="js/task-08.js" type="module"></script>
   </body>
 </html>
