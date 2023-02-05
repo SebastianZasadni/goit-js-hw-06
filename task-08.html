@@ -7,59 +7,27 @@
     <title>Task 8</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
-      body{
-        position: absolute;
-      }
-      #reset{
-        position:relative;
-        margin:50px;
-        left: -540px;
-        top: -80px;
-      }
-      .login-form,
-      .register-form {
+      .login-form {
         max-width: 320px;
         display: flex;
         flex-direction: column;
-        -webkit-box-shadow: inset 20px -18px 100px -42px rgba(92, 92, 126, 1);
--moz-box-shadow: inset 20px -18px 100px -42px rgba(92, 92, 126, 1);
-box-shadow: inset 20px -18px 100px -42px rgba(92, 92, 126, 1);
-        margin: 50px;
-        border: 2px solid lightgrey;
-        float:left;
-        padding: 80px 40px 120px 40px;
       }
 
-      .login-form label,
-      .register-form label {
+      .login-form label {
         margin-bottom: 16px;
       }
 
       .login-form input,
-      .login-form button,
-      .register-form input,
-      .register-form button {
+      .login-form button {
         width: 100%;
         padding: 4px;
         font: inherit;
       }
-          </style>
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
-    <button type="submit" id="reset">Reset local storage</button>
-    <form class="register-form">
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit" data-check>Register</button>
-          </form>
-          
+
     <form class="login-form">
       <label>
         Email
@@ -69,9 +37,9 @@ box-shadow: inset 20px -18px 100px -42px rgba(92, 92, 126, 1);
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit" data-check>Login</button>
-          </form>
-          
+      <button type="submit">Login</button>
+    </form>
+
     <script src="js/task-08.js" type="module"></script>
   </body>
 </html>
